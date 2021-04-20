@@ -9,7 +9,7 @@ def generisanje():
     niz=[]
     for i in range(4):
         niz.append((int)(random.random()*6)+1)
-        return niz
+    return niz
     
 def korisnikunosi():
     niz=[]
@@ -23,7 +23,7 @@ def mestoznak(trazeni, pokusaj):
     for i in range(len(trazeni)):
         if(trazeni[i]==pokusaj[i]):
             br=br+1
-        return br
+    return br
 
 def samoznak(trazeni, pokusaj):
     br=0
@@ -39,11 +39,14 @@ def samoznak(trazeni, pokusaj):
     return br
 
 trazeni=generisanje()
+print(trazeni)
 while True:
     pokusaj=korisnikunosi()
     if trazeni==pokusaj:
         print("Pogodili ste, niz je", trazeni)
+        exit()
     else:
         mesto=mestoznak(trazeni, pokusaj)
         broj=samoznak(trazeni, pokusaj)
         print("Pokusaj", pokusaj, "i mesto i broj", mesto, "samo broj", broj)
+
